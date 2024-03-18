@@ -23,12 +23,10 @@ class NewsDetailsView extends GetView<NewsDetailsController> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            PinchZoomImage(
-              imageUrl: homeController.newsList.value?.data?[controller.index].imageUrl ?? '',
-            ),
-          ],
+        child: Expanded(
+          child: PinchZoomImage(
+            imageUrl: homeController.newsList.value?.data?[controller.index].imageUrl ?? '',
+          ),
         ),
       ),
     );
